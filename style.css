@@ -1,0 +1,125 @@
+body{
+    background-image: url("static/background_image.jpg");  
+    background-size: cover;                 
+    background-repeat: no-repeat;            
+    background-position: center;             
+    font-family: 'Georgia', sans-serif;
+    margin: 0px;
+    color:black;
+    line-height: 30px;
+}
+
+header{
+    font-size: 10px;
+    background-color: #FFF8DC;
+    color: #2F4F4F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+#about{
+    padding: 100px 50px;
+    margin: 40px 50px 50px 50px;
+    color:#000000;
+}
+#contact{
+    background-color: #e6f7ff;
+    padding: 20px 20px 50px 50px;
+    border: 2px solid #ccc;
+
+}
+
+
+.btn{
+    font-size: 20px;
+    display: inline-block;  
+    margin-top: 40px;  
+    color: #333;
+    background-color: wheat;
+    border: 5px solid white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+img{
+    padding: 20px;
+    margin: 0px 0px 0px 100px;
+    width: 500px;
+    height:auto;
+    float: right;
+    border: 10px solid white;
+    border-radius: 50px;
+}
+.refstyle{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 1rem 2cap;
+    color: #2F4F4F;
+}
+.iconstyle{
+    padding: 0px;
+    margin: 0px;
+    float:left;
+    width: 30px;
+    height:auto;
+    border: none;
+    border-radius: 50px;
+}
+
+.highlight {
+    font-weight: bold;        
+    color: rgb(12, 66, 46);             
+}
+.highlight2 {
+    font-weight: bold;        
+    color: #4682B4;             
+}
+
+.titlestyle{
+    margin-bottom: 80px;
+    font-size: 40px;
+    color: #0d1a43;
+}
+#projects {
+    padding: 100px 50px;
+    margin: 40px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+#skills {
+    padding: 100px 100px 100px 100px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.skill-block {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    background-color: #FFF8DC;
+}
+
+.skill-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}

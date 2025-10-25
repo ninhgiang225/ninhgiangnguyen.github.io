@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Ninh Giang Nguyen | Portfolio</title>
+        <link rel="stylesheet" href="style.css"/>
+
+    </head>
+    <body>
+        <header>
+            <h1>Ninh Giang Nguyen | Welcome to my Portfolio</h1>
+            <nav>
+                <a href="#projects" class="refstyle">Projects</a>
+                <a href="#skills" class="refstyle">Skills</a>
+                <a href="#about" class="refstyle">About Me</a>
+                <a href="#contact" class="refstyle">Contact</a>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2><img src = static/profile_photo.png alt="Project Screenshot">Hello, my name is Giang</h2>
+            <p>I’ve always been driven by curiosity — curiosity about how things work, why people make certain choices, and how data can reveal patterns that aren’t immediately visible. This natural interest grew into a passion for understanding the intersection of <span class="highlight">data, technology, and business</span>.</p>
+            <p>My journey began with exploring how numbers tell stories. Over time, I realized that data isn’t just about analysis — it’s about  <span class="highlight">translating technical findings into insights that guide meaningful decisions</span>. Whether it’s optimizing a process, predicting an outcome, or understanding customer behavior, I find excitement in uncovering the “why” behind the data.</p>
+            <p>Studying <span class="highlight">Computer Science and Economics</span> has given me the perfect balance between technical precision and strategic thinking. I enjoy using tools like <span class="highlight">Python, R, and SQL as well as Machine Learning and AI-based models</span> to transform complex data into clear visualizations and narratives that align with business goals. To me, the most rewarding part of data science is not only building models but also <span class="highlight">telling the story behind the data</span> — connecting insights with impact.</p>
+            <a href="#contact" class="btn">Contact Me </a>
+            
+        </section>
+
+        <section id="projects">
+            <h2 class = "titlestyle">My Projects</h2>
+            <section id="project1">
+                <div>
+                    <h3><img src="static/FutureProof.png" alt="Project Screenshot">FutureProof: Comapany Bankruptcy Prediction</h3>
+                    <p>Built predictive models to estimate bankruptcy risk for <span class="highlight2">~7,000 companies</span> using financial performance metrics</p>
+                    <p>Applied <span class="highlight2">Joblib, seaborn, scikit-learn, and SHAP</span> to conduct EDA, feature engineering, visualize data and results, and interpret model behavior and feature importance</p>
+                    <p>Optimized tree-based models <span class="highlight2">(XGBoost, Random Forest, SVM, and LightGBM, CatBoost)</span>, achieving <span class="highlight2">>90% accuracy</span></p>
+                    <p>Developed and deployed a dashboard leveraging <span class="highlight2">Streamlit</span> to predict bankruptcy and highlight top 5 financial risk indicators</p>
+
+                    <a href="https://github.com/ninhgiang225/Data-based-Project-Company-Bankruptcy-Prediction" target="_blank" class="btn">Source Code</a>
+                </div>
+            </section>
+            <section id="project2">
+                <div>
+                    <h3><img src="static/PharmaGuard.png" alt="Project Screenshot">PharmaGuard</h3>
+                    
+                    <p>Engineered a <span class="highlight2">MySQL database</span> with three interlinked schemas (<span class="highlight2">APIs from OpenFDA, DailyMed, MedlinePlus</span>) to integrate drug details, recalls, and adverse events into a comprehensive system,<span class="highlight2">enabling sub-second query performance</span></p> </p>
+                    <p>Compiled a <span class="highlight2">Python-based ETL pipeline with Pandas, SQL and Spark </span>to extract, clean, and store drug information, and utilized <span class="highlight2">Hive</span> for efficient querying and up-to-date aggregation of large datasets</p>
+                    <a href="https://github.com/ninhgiang225/Drug_data_engineering_project" target="_blank" class="btn">Source Code</a>
+                </div>
+            </section>
+            <section id="project3"> 
+                <div class="project">
+                    <h3><img src="static/project3_img.png" alt="Project Screenshot">AdoptGraph: Social Tech Uptake Forecasting</h3>
+                    <p>Forecasted technology adoption among Facebook users by analyzing <span class="highlight2">100K+ social graph </span>nodes and edges, incorporating features such as friend count, interaction frequency, and neighbors’ behavior</p>
+                    <p>Implemented a <span class="highlight2">3-layer Graph Convolutional Network with PyTorch Geometric</span>3-layer Graph Convolutional Network with PyTorch Geometric, reaching a <span class="highlight2">baseline accuracy of ~80%</span></p>
+                    <p>Extended analysis with global graph signals, including connection density and average node clustering to enhance prediction</p>
+                    <a href="https://github.com/ninhgiang225/Predict-Adoption-via-GNN-on-Facebook-Data" target="_blank" class="btn">Source Code</a>
+                </div>
+            </section>   
+        </section>
+
+        <section id="skills">
+            <h2 class = "titlestyle">My Skills</h2>
+            <div class="skills-container">
+                
+                <div class="skill-block">
+                    <h3>Programming & Data Management</h3>
+                    <p>For data collection, cleaning, building pipelines and processing</p>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>R</li>
+                        <li>Stata</li>
+                        <li>AWS</li>
+                        <li>APIs</li>
+                        <li>Numpy</li>
+                        <li>Pandas</li>
+                        <li>OpenCV</li>
+                        <li>Pillow</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-block">
+                    <h3>Statistical Analysis & Data Visualization</h3>
+                    <p>To analyze trends, test hypotheses, and communicate insights clearly through reports & dashboards.</p>
+                    <ul>
+                        <li>A/B Testing</li>
+                        <li>Predictive Analytics</li>
+                        <li>Time-series Analysis</li>
+                        <li>Excel VBA</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                        <li>Tableau</li>
+                        <li>PowerBI</li>
+                        <li>Jupyter Notebook</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-block">
+                    <h3>Machine Learning & AI</h3>
+                    <p>To build predictive models, uncover patterns, and solve complex problems</p>
+                    <ul>
+                        <li>PyTorch</li>
+                        <li>Keras</li>
+                        <li>Clustering</li>
+                        <li>PCA</li>
+                        <li>Regression</li>
+                        <li>Classification</li>
+                        <li>Model Evaluation</li>
+                        <li>Neural Networks</li>
+                        <li>Deep Learning</li>
+                        <li>Reinforcement Learning</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-block">
+                    <h3>Software Engineering</h3>
+                    <p>Enabling the design and implementation of reliable, scalable applications</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Git</li>
+                        <li>CSS</li>
+                        <li>C#</li>
+                        <li>JavaScript</li>
+                        <li>Flask</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+
+        <footer id="contact">
+            <h2>Contact Me</h2>
+            <h3>Ninh Giang Nguyen</h3>
+            <p><img src="static/email_icon.webp" class="iconstyle"> <a href="mailto:ngnguy26@colby.edu" class="refstyle">ngnguy26@colby.edu</a></p>
+            <p><img src="static/linkedin_icon.png" class="iconstyle"><a href="https://www.linkedin.com/in/ninh-giang-nguyen-99480b293/" target="_blank" class="refstyle">LinkedIn</a></p>
+            <p><img src="static/github_icon.png" class="iconstyle"><a href="https://github.com/ninhgiang225" target="_blank" class="refstyle">Github</a></p>
+        </footer>
+
+    </body>
+</html>
