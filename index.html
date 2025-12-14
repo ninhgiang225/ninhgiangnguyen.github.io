@@ -47,7 +47,7 @@
             </div>
             <li style="margin-top:10px;">📞<a href="tel:+12076607715"> 207-660-7715</a></li>
             <li>✉️ <a href="mailto:ngnguy26@colby.edu"> ngnguy26@colby.edu</a></li>
-            <li class="contact-button" style="margin-top:30px;"><a href="images/Ninh Giang Nguyen - Resume for Data Science.pdf">My Resume</a></li>
+            <li class="contact-button" style="margin-top:30px;"><a href="images/Ninh Giang Nguyen - Official Resume.pdf">My Resume</a></li>
         </ul>
       </div>
 
@@ -151,7 +151,7 @@
               <span class="pill">C#</span>
               <span class="pill">JavaScript</span>
               <span class="pill">Flask</span>
-              <span class="pill">React</span>
+              <span class="pill">REST</span>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@
 
     <!-- Projects -->
     <section id="projects" class="section">
-        <h3>Projects</h3>
+        <h3>Projects (6+)</h3>
         <div class="projects-wrapper">
         
             <button class="nav-btn prev-btn" aria-label="Previous Projects">&#10094;</button>
@@ -223,41 +223,70 @@
                 </ul>                  
                 </div>
                 </a>
-                 
-                <a class="project-link" href="https://github.com/ninhgiang225/Drug_data_engineering_project" target="_blank">
-                <div class="project-card">
-                <img src="images/PharmaGuard.png" alt="Project image">
-                <h3>PharmaGuard</h3>
-                <ul>
-                    <li>Engineered a MySQL database with linked schemas to unify drug details, recalls, and adverse events, achieving sub-second query performance</li>
-                    <li>Built a Python ETL pipeline using Pandas, SQL, and Spark to extract, clean, and load drug data, leveraging Hive for fast querying and fresh aggregations on large datasets</li>
-                </ul>
-                </div>
+
+                <a class="project-link" href="https://github.com/Colby-Now-Merchandise/Colby-Now-Merchandise" target="_blank">
+                  <div class="project-card">
+                    <img src="images/ColbyNowMerchandise.png" alt="Project image">
+                    <h3>ColbyNow Merchandise: Campus Marketplace</h3>
+                    <ul>
+                      <li>Built a full-stack marketplace enabling Colby students to list, browse, message, and transact items securely</li>
+                      <li>Implemented 17+ production-ready features like authentication, live chat, order tracking, and seller approval</li>
+                      <li>Integrated Semantic search using SentenceTransformer embeddings to support meaning-based item discovery beyond keyword matching</li>
+                      <li>Leveraged RESTful APIs backed by dual-database setup (SQLite and PostgreSQL)</li>
+                      <li>Established a CI/CD pipeline with GitHub Actions, pytest achieving ~95% test coverage, and deployment to Heroku</li>
+                    </ul>
+                  </div>
+                </a>
+
+                <a class="project-link" href="https://github.com/ninhgiang225/CityFlow-AI-Pedestrian-Vehicle-Movement-Analytics" target="_blank">
+                  <div class="project-card">
+                    <img src="images/CityFlowAI.png" alt="Project image">
+                    <h3>CityFlow AI: Real-Time Pedestrian & Vehicle Tracking</h3>
+                    <ul>
+                      <li>Built a real-time computer vision pipeline to detect and track pedestrians and vehicles from traffic video using YOLOv8, achieving 79% mAP@50</li>
+                      <li>Integrated multi-object tracking (Deep SORT and BoT-SORT) to maintain object IDs under occlusion and dense crowds</li>
+                      <li>Developed an analytics layer to compute pedestrian counts, traffic flow ratios, and density heatmaps</li>
+                    </ul>
+                  </div>
                 </a>
                 
-                <a class="project-link" href="https://github.com/ninhgiang225/Predict-Adoption-via-GNN-on-Facebook-Data" target="_blank">
-                <div class="project-card">
-                <img src="images/AdoptGraph.png" alt="Project image">
-                <h3>AdoptGraph: Social Tech Uptake Forecasting</h3>
-                <ul>
-                    <li>Forecasted technology adoption among 100K+ Facebook users by analyzing social graph features </li>
-                    <li>Implemented a 3-layer Graph Convolutional Network with PyTorch Geometric, achieving ~80% baseline accuracy</li>
-                </ul>
-                </div>
+        
+                <a class="project-link" href="https://github.com/ninhgiang225/mulevents" target="_blank">
+                  <div class="project-card">
+                    <img src="images/Mulevents.png" alt="Project image">
+                    <h3>Mulevents: Campus Event Platform</h3>
+                    <ul>
+                      <li>Built a full-stack Flask web app to centralize campus event discovery, management, and promotion for Residential Life</li>
+                      <li>Implemented HTML, CSS, JavaScript and Database (SQLite / PostgreSQL)</li>
+                      <li>Designed QR-code attendance tracking and Google Calendar integration to replace manual check-ins</li>
+                      <li>Added automated testing with pytest and deployed the application to Heroku using a CI/CD workflow</li>
+                    </ul>
+                  </div>
                 </a>
-        
-                <!-- Add unlimited more cards… -->
-                <!-- <div class="project-card">
-                <img src="images/p4.png" alt="Project image">
-                <h3>Project Title 4</h3>
-                <p>Description text.</p>
-                </div>
-        
-                <div class="project-card">
-                <img src="images/p5.png" alt="Project image">
-                <h3>Project Title 5</h3>
-                <p>Description text.</p>
-                </div> -->
+
+                <a class="project-link" href="https://github.com/ninhgiang225/Predict-Adoption-via-GNN-on-Facebook-Data" target="_blank">
+                  <div class="project-card">
+                  <img src="images/AdoptGraph.png" alt="Project image">
+                  <h3>AdoptGraph: Social Tech Uptake Forecasting</h3>
+                  <ul>
+                      <li>Forecasted technology adoption among 100K+ Facebook users by analyzing social graph features </li>
+                      <li>Implemented a 3-layer Graph Convolutional Network with PyTorch Geometric, achieving ~80% baseline accuracy</li>
+                  </ul>
+                  </div>
+                </a>
+
+                <a class="project-link" href="https://github.com/ninhgiang225/Drug_data_engineering_project" target="_blank">
+                  <div class="project-card">
+                  <img src="images/PharmaGuard.png" alt="Project image">
+                  <h3>PharmaGuard</h3>
+                  <ul>
+                      <li>Engineered a MySQL database with linked schemas to unify drug details, recalls, and adverse events, achieving sub-second query performance</li>
+                      <li>Built a Python ETL pipeline using Pandas, SQL, and Spark to extract, clean, and load drug data, leveraging Hive for fast querying and fresh aggregations on large datasets</li>
+                  </ul>
+                  </div>
+                </a>
+
+
         
             </div>
             </div>
