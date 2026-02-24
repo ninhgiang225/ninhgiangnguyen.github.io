@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ninh Giang Nguyen — Aspiring Data Specialist</title>
   <meta name="description" content="Ninh Giang Nguyen — Data Scientist / Analyst. Portfolio and resume." />
-  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:,">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Animated cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -17,7 +26,6 @@
           <p class="subtitle">Aspiring Data Specialist</p>
         </div>
       </div>
-
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -29,335 +37,449 @@
   </header>
 
   <main class="container">
-    <!-- Hero / Contact bar -->
+
+    <!-- Hero -->
     <section class="hero">
       <div class="hero-left">
-        <h2>Hi — I'm Giang.</h2>
-        <p class="lead">I build data-driven products and predictive models. Available for 2026 new-grad positions and collaborations.</p>
+        <div class="hero-tag">Available for 2026 new-grad roles</div>
+        <h2 class="hero-title">Hi — I'm <em>Gina.</em></h2>
+        <p class="lead">I build data-driven products and predictive models that turn raw information into real decisions.</p>
 
         <ul class="contact-inline">
-            <div class="social-row">
-                <li class="contact-button"><a href="#contact">Contact Me</a></li>
-                <a href="https://www.linkedin.com/in/ninhgiangnguyen/" class="social-icon" aria-label="LinkedIn">
-                  <img src="images/Screenshot 2025-11-10 at 11.31.45 AM.png" alt="LinkedIn logo">
-                </a>
-                <a href="https://github.com/ninhgiang225" class="social-icon" aria-label="GitHub">
-                  <img src="images/Screenshot 2025-11-10 at 11.22.55 AM.png" alt="GitHub logo">
-                </a>
-            </div>
-            <li style="margin-top:10px;">📞<a href="tel:+12076607715"> 207-660-7715</a></li>
-            <li>✉️ <a href="mailto:ngnguy26@colby.edu"> ngnguy26@colby.edu</a></li>
-            <li class="contact-button" style="margin-top:30px;"><a href="images/Gina (Giang) Nguyen - Data Science.pdf">My Resume</a></li>
+          <div class="social-row">
+            <li class="contact-button"><a href="#contact">Contact Me</a></li>
+            <a href="https://www.linkedin.com/in/ninhgiangnguyen/" class="social-icon" aria-label="LinkedIn">
+              <img src="images/Screenshot 2025-11-10 at 11.31.45 AM.png" style="margin-left:14px;" alt="LinkedIn logo">
+            </a>
+            <a href="https://github.com/ninhgiang225" class="social-icon" aria-label="GitHub">
+              <img src="images/Screenshot 2025-11-10 at 11.22.55 AM.png" style="margin-left:14px;" alt="GitHub logo">
+            </a>
+          </div>
+          <li style="margin-top:14px;">📞 : <a href="tel:+12076607715">207-660-7715</a></li>
+          <li>✉️ : <a href="mailto:ngnguy26@colby.edu">ngnguy26@colby.edu</a></li>
+          <li class="contact-button" style="margin-top:30px;"><a href="images/Gina (Giang) Nguyen - Data Science.pdf">My Resume ↗</a></li>
         </ul>
       </div>
 
       <div class="hero-right">
-        <div class="hero-img">
-            <img src="images/profile_photo.png" alt="profile_image">
+        <div class="hero-img-wrap">
+          <div class="hero-img">
+            <img src="images/profile_photo.png" alt="Giang's profile photo">
+          </div>
+          <div class="hero-img-ring"></div>
         </div>
-        
         <div class="card quick-info">
-          <strong style="font-size: 25px">Education</strong>
-          <p>Colby College — B.A. Computer Science & Economics (Graduating May 2026)</p>
-          <p style="color:rgb(151, 152, 152)">Minor: Statistics • Major GPA: 3.95 / 4.0</p>
+          <strong class="edu-label">Education</strong>
+          <p>Colby College — B.A. Computer Science & Economics</p>
+          <p class="edu-sub">Graduating May 2026 &nbsp;·&nbsp; Minor: Statistics &nbsp;·&nbsp; Major GPA: <span class="gpa">3.95 / 4.0</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee strip -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>Python</span><span>·</span>
+        <span>Machine Learning</span><span>·</span>
+        <span>Data Engineering</span><span>·</span>
+        <span>Computer Vision</span><span>·</span>
+        <span>YOLOv8</span><span>·</span>
+        <span>PyTorch</span><span>·</span>
+        <span>SQL</span><span>·</span>
+        <span>Tableau</span><span>·</span>
+        <span>Flask</span><span>·</span>
+        <span>Predictive Analytics</span><span>·</span>
+        <span>Python</span><span>·</span>
+        <span>Machine Learning</span><span>·</span>
+        <span>Data Engineering</span><span>·</span>
+        <span>Computer Vision</span><span>·</span>
+        <span>YOLOv8</span><span>·</span>
+        <span>PyTorch</span><span>·</span>
+        <span>SQL</span><span>·</span>
+        <span>Tableau</span><span>·</span>
+        <span>Flask</span><span>·</span>
+        <span>Predictive Analytics</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="section reveal">
+      <div class="section-label">01 / About</div>
+      <h3>About</h3>
+      <div class="about-grid">
+        <p class="about-body">I'm passionate about predictive analytics, model explainability, and building production-ready data solutions. I enjoy working on projects that combine data engineering, model development, and actionable dashboards for stakeholders.</p>
+        <div class="about-pills">
+          <span class="about-pill">Big Datasets</span>
+          <span class="about-pill">Model Deployment</span>
+          <span class="about-pill">EDA & Feature Engineering</span>
+          <span class="about-pill">Supervised Learning</span>
+          <span class="about-pill">Model Benchmarking</span>
+          <span class="about-pill">Visualization</span>
+          <span class="about-pill">FinTech</span>
+          <span class="about-pill">Banking</span>
+          <span class="about-pill">Manufacturing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section reveal">
+      <div class="section-label">02 / Skills</div>
+      <h3>Skills</h3>
+      <div class="skills-grid">
+
+        <div class="skill-block">
+          
+          <h4>Programming & Data Management</h4>
+          <p>For data collection, cleaning, building pipelines and processing</p>
+          <div class="skills-pills">
+            <span class="pill">Python</span>
+            <span class="pill">SQL</span>
+            <span class="pill">R</span>
+            <span class="pill">Stata</span>
+            <span class="pill">AWS</span>
+            <span class="pill">APIs</span>
+            <span class="pill">Numpy</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">OpenCV</span>
+            <span class="pill">Pillow</span>
+            <span class="pill">Snowflake</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          
+          <h4>Statistical Analysis & Visualization</h4>
+          <p>Analyze trends, test hypotheses, communicate insights via dashboards</p>
+          <div class="skills-pills">
+            <span class="pill">A/B Testing</span>
+            <span class="pill">Predictive Analytics</span>
+            <span class="pill">Time-series</span>
+            <span class="pill">Excel VBA</span>
+            <span class="pill">Matplotlib</span>
+            <span class="pill">Seaborn</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">PowerBI</span>
+            <span class="pill">Jupyter</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          
+          <h4>Machine Learning & AI</h4>
+          <p>Build predictive models, uncover patterns, and solve complex problems</p>
+          <div class="skills-pills">
+            <span class="pill">PyTorch</span>
+            <span class="pill">Keras</span>
+            <span class="pill">Clustering</span>
+            <span class="pill">PCA</span>
+            <span class="pill">Logistic Regression</span>
+            <span class="pill">Classification</span>
+            <span class="pill">Neural Networks</span>
+            <span class="pill">Deep Learning</span>
+            <span class="pill">Reinforcement Learning</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          
+          <h4>Software Engineering</h4>
+          <p>Design and implement reliable, scalable applications</p>
+          <div class="skills-pills">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">Git</span>
+            <span class="pill">C#</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Flask</span>
+            <span class="pill">REST</span>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- About / Summary -->
-    <section id="about" class="section">
-      <h3>About</h3>
-      <p>I'm passionate about predictive analytics, model explainability, and building production-ready data solutions. I enjoy working on projects that combine data engineering, model development, and actionable dashboards for stakeholders.</p>
-      <ul class="bullets">
-        <li>Experience with big datasets and model deployment</li>
-        <li>Skilled in EDA, feature engineering, supervised learning, model benchmarking, and visualization</li>
-        <li>Industry: FinTech, Banking, Manufacturing company</li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    
-    <section id="skills" class="section">
-        <h3>Skills</h3>
-        <div class="skills-grid">
-          <!-- Programming & Data Management -->
-          <div class="skill-block">
-            <img src="images/Screenshot 2025-11-10 at 4.34.43 PM.png" style="width:100px;">
-            <h4>Programming & Data Management</h4>
-            <p>For data collection, cleaning, building pipelines and processing</p>
-            <div class="skills-pills">
-              <span class="pill">Python</span>
-              <span class="pill">SQL</span>
-              <span class="pill">R</span>
-              <span class="pill">Stata</span>
-              <span class="pill">AWS</span>
-              <span class="pill">APIs</span>
-              <span class="pill">Numpy</span>
-              <span class="pill">Pandas</span>
-              <span class="pill">OpenCV</span>
-              <span class="pill">Pillow</span>
-              <span class="pill">Snowflake</span>
-            </div>
-          </div>
-      
-          <!-- Statistical Analysis & Data Visualization -->
-          <div class="skill-block">
-            <img src="images/Screenshot 2025-11-10 at 4.41.06 PM.png" style="width:100px;">
-            <h4>Statistical Analysis & Data Visualization</h4>
-            <p>Analyze trends, test hypotheses, communicate insights via dashboards & reports</p>
-            <div class="skills-pills">
-              <span class="pill">A/B Testing</span>
-              <span class="pill">Predictive Analytics</span>
-              <span class="pill">Time-series Analysis</span>
-              <span class="pill">Excel VBA</span>
-              <span class="pill">Matplotlib</span>
-              <span class="pill">Seaborn</span>
-              <span class="pill">Tableau</span>
-              <span class="pill">PowerBI</span>
-              <span class="pill">Jupyter Notebook</span>
-              
-            </div>
-          </div>
-      
-          <!-- Machine Learning & AI -->
-          <div class="skill-block">
-            <img src="images/Screenshot 2025-11-10 at 4.42.24 PM.png" style="width:120px;">
-            <h4>Machine Learning & AI</h4>
-            <p>Build predictive models, uncover patterns, and solve complex problems</p>
-            <div class="skills-pills">
-              <span class="pill">PyTorch</span>
-              <span class="pill">Keras</span>
-              <span class="pill">Clustering</span>
-              <span class="pill">PCA</span>
-              <span class="pill">Logistic Regression</span>
-              <span class="pill">Classification</span>
-              <span class="pill">Model Evaluation</span>
-              <span class="pill">Neural Networks</span>
-              <span class="pill">Deep Learning</span>
-              <span class="pill">Reinforcement Learning</span>
-            </div>
-          </div>
-      
-          <!-- Software Engineering -->
-          <div class="skill-block">
-            <img src="images/Screenshot 2025-11-10 at 4.36.07 PM.png" style="width:120px;">
-            <h4>Software Engineering</h4>
-            <p>Design and implement reliable, scalable applications</p>
-            <div class="skills-pills">
-              <span class="pill">HTML</span>
-              <span class="pill">CSS</span>
-              <span class="pill">Git</span>
-              <span class="pill">C#</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">Flask</span>
-              <span class="pill">REST</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-
     <!-- Experience -->
-    <section id="experience" class="section">
+    <section id="experience" class="section reveal">
+      <div class="section-label">03 / Experience</div>
       <h3>Experience</h3>
 
-      <section class="timeline">
+      <div class="timeline">
 
-        <div class="entry left">
-          <div class="dot" style="left:32.7vw"></div>
-          <div class="date">Jun 2025 – Present</div>
-          <div class="box">
-            <h4>Data Science Intern<br><span class="sub-role">VPBank | Digital Bank Team</span></h4>
-            <p>• Analyzed and processed 5M+ customer profiles to develop a Credit Card Approval prediction model.</p>
-            <p>• Conducted EDA, feature engineering, and benchmarking using advanced AI models (DeepGBM, SAINT, IGTD).</p>
-            <p>• Built PowerBI presentations for 10+ business analysts and stakeholders.</p>
-            <p>• Collaborated on AI-driven risk scoring and fraud detection research.</p>
+        <div class="tl-item">
+          <div class="tl-left">
+            <span class="tl-date">Jun 2025 – Present</span>
           </div>
-        </div>
-      
-        <div class="entry right">
-          <div class="dot" style="right:29.4vw"></div>
-          <div class="date">Jun 2024 – Sep 2024</div>
-          <div class="box">
-            <h4>Data Analyst<br><span class="sub-role">Greentech Vina | Data & Analytics Team</span></h4>
-            <p>• Consolidated 10M+ international trade records using Excel and Python.</p>
-            <p>• Used Tableau to analyze market anomalies and customer segments.</p>
-            <p>• Improved reporting pipeline efficiency by 30%.</p>
+          <div class="tl-dot"></div>
+          <div class="tl-right">
+            <div class="tl-card">
+              <h4>Data Science Intern</h4>
+              <span class="tl-company">VPBank · Digital Bank Team</span>
+              <ul>
+                <li>Analyzed and processed 5M+ customer profiles to develop a Credit Card Approval prediction model.</li>
+                <li>Conducted EDA, feature engineering, and benchmarking using advanced AI models (DeepGBM, SAINT, IGTD).</li>
+                <li>Built PowerBI presentations for 10+ business analysts and stakeholders.</li>
+                <li>Collaborated on AI-driven risk scoring and fraud detection research.</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="entry left">
-          <div class="dot" style="left:32.7vw"></div>
-          <div class="date">Dec 2023 – Dec 2024</div>
-          <div class="box">
-            <h4>AI Engineering Intern<br><span class="sub-role">Vietnam Academy for Science and Technology</span></h4>
-            <p>• Transformed 1.5M+ air-quality records using time-series analysis to detect pollution spikes,improving anomaly detection accuracy by 12%</p>
-            <p>• Visualized in Looker Studio to oversee long-term trends following industrial incidents</p>
-            <p>• Managed A/B testing to evaluate pollutant levels pre/post anti-pollution interventions, enabling quantitative evaluation for research reporting./p>
+        <div class="tl-item">
+          <div class="tl-left">
+            <span class="tl-date">Jun 2024 – Sep 2024</span>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-right">
+            <div class="tl-card">
+              <h4>Data Analyst</h4>
+              <span class="tl-company">Greentech Vina · Data & Analytics Team</span>
+              <ul>
+                <li>Consolidated 10M+ international trade records using Excel and Python.</li>
+                <li>Used Tableau to analyze market anomalies and customer segments.</li>
+                <li>Improved reporting pipeline efficiency by 30%.</li>
+              </ul>
+            </div>
           </div>
         </div>
-      
-        <div class="entry right">
-          <div class="dot" style="right:29.4vw"></div>
-          <div class="date">Sep 2023 – Present</div>
-          <div class="box">
-            <h4>Head Math Teaching Assistant<br><span class="sub-role">Colby College @ Waterville, ME, USA</span></h4>
-            <p>• Led study sessions for 30+ students in Linear Algebra and Statistical Inference.</p>
-            <p>• Coordinated grading and academic feedback with faculty.</p>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <span class="tl-date">Dec 2023 – Dec 2024</span>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-right">
+            <div class="tl-card">
+              <h4>AI Engineering Intern</h4>
+              <span class="tl-company">Vietnam Academy for Science and Technology</span>
+              <ul>
+                <li>Transformed 1.5M+ air-quality records using time-series analysis to detect pollution spikes, improving anomaly detection accuracy by 12%.</li>
+                <li>Visualized in Looker Studio to oversee long-term trends following industrial incidents.</li>
+                <li>Managed A/B testing to evaluate pollutant levels pre/post anti-pollution interventions.</li>
+              </ul>
+            </div>
           </div>
         </div>
-      
-      </section>
-      
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <span class="tl-date">Sep 2023 – Present</span>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-right">
+            <div class="tl-card">
+              <h4>Head Math Teaching Assistant</h4>
+              <span class="tl-company">Colby College · Waterville, ME, USA</span>
+              <ul>
+                <li>Led study sessions for 30+ students in Linear Algebra and Statistical Inference.</li>
+                <li>Coordinated grading and academic feedback with faculty.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- Projects -->
-    <section id="projects" class="section">
-        <h3>Projects (6+)</h3>
-        <div class="projects-wrapper">
-        
-            <button class="nav-btn prev-btn" aria-label="Previous Projects">&#10094;</button>
-        
-            <div class="projects-container">
-            <div class="projects-grid">
-        
-                <!-- Project Card -->
-                <a class="project-link" href="https://github.com/ninhgiang225/Data-based-Project-Company-Bankruptcy-Prediction" target="_blank">
-                <div class="project-card">
-                <img src="images/FutureProof.png" alt="Project image">
-                <h3>FutureProof: Bankruptcy Detection</h3>
-                <ul>
-                    <li>Built predictive models on ~7,000 companies to estimate bankruptcy risk using financial metrics</li>
-                    <li>Used Joblib, Seaborn, scikit-learn, and SHAP for EDA, feature engineering, visualization, and model interpretation</li>
-                    <li>Optimized tree-based models to achieve over 90% accuracy</li>
-                    <li>Deployed a Streamlit dashboard for real-time predictions and key risk insights</li>
-                </ul>                  
+    <section id="projects" class="section reveal">
+      <div class="section-label">04 / Projects</div>
+      <h3>Projects <span class="project-count">(6+)</span></h3>
+
+      <div class="projects-wrapper">
+        <button class="nav-btn prev-btn" aria-label="Previous Projects">&#10094;</button>
+        <div class="projects-container">
+          <div class="projects-grid">
+
+            <a class="project-link" href="https://github.com/ninhgiang225/Data-based-Project-Company-Bankruptcy-Prediction" target="_blank">
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="images/FutureProof.png" alt="FutureProof project">
+                  <div class="project-overlay">View on GitHub ↗</div>
                 </div>
-                </a>
-
-                <a class="project-link" href="https://github.com/Colby-Now-Merchandise/Colby-Now-Merchandise" target="_blank">
-                  <div class="project-card">
-                    <img src="images/ColbyNowMerchandise.png" alt="Project image">
-                    <h3>ColbyNow Merchandise: Campus Marketplace</h3>
-                    <ul>
-                      <li>Built a full-stack marketplace enabling Colby students to list, browse, message, and transact items securely</li>
-                      <li>Implemented 17+ production-ready features like authentication, live chat, order tracking, and seller approval</li>
-                      <li>Integrated Semantic search using SentenceTransformer embeddings to support meaning-based item discovery beyond keyword matching</li>
-                      <li>Leveraged RESTful APIs backed by dual-database setup (SQLite and PostgreSQL)</li>
-                      <li>Established a CI/CD pipeline with GitHub Actions, pytest achieving ~95% test coverage, and deployment to Heroku</li>
-                    </ul>
-                  </div>
-                </a>
-
-                <a class="project-link" href="https://github.com/ninhgiang225/CityFlow-AI-Pedestrian-Vehicle-Movement-Analytics" target="_blank">
-                  <div class="project-card">
-                    <img src="images/CityFlowAI.png" alt="Project image">
-                    <h3>CityFlow AI: Real-Time Pedestrian & Vehicle Tracking</h3>
-                    <ul>
-                      <li>Built a real-time computer vision pipeline to detect and track pedestrians and vehicles from traffic video using YOLOv8, achieving 79% mAP@50</li>
-                      <li>Integrated multi-object tracking (Deep SORT and BoT-SORT) to maintain object IDs under occlusion and dense crowds</li>
-                      <li>Developed an analytics layer to compute pedestrian counts, traffic flow ratios, and density heatmaps</li>
-                    </ul>
-                  </div>
-                </a>
-                
-        
-                <a class="project-link" href="https://github.com/ninhgiang225/mulevents" target="_blank">
-                  <div class="project-card">
-                    <img src="images/Mulevents.png" alt="Project image">
-                    <h3>Mulevents: Campus Event Platform</h3>
-                    <ul>
-                      <li>Built a full-stack Flask web app to centralize campus event discovery, management, and promotion for Residential Life</li>
-                      <li>Implemented HTML, CSS, JavaScript and Database (SQLite / PostgreSQL)</li>
-                      <li>Designed QR-code attendance tracking and Google Calendar integration to replace manual check-ins</li>
-                      <li>Added automated testing with pytest and deployed the application to Heroku using a CI/CD workflow</li>
-                    </ul>
-                  </div>
-                </a>
-
-                <a class="project-link" href="https://github.com/ninhgiang225/Predict-Adoption-via-GNN-on-Facebook-Data" target="_blank">
-                  <div class="project-card">
-                  <img src="images/AdoptGraph.png" alt="Project image">
-                  <h3>AdoptGraph: Social Tech Uptake Forecasting</h3>
+                <div class="project-body">
+                  <h3>FutureProof: Bankruptcy Detection</h3>
                   <ul>
-                      <li>Forecasted technology adoption among 100K+ Facebook users by analyzing social graph features </li>
-                      <li>Implemented a 3-layer Graph Convolutional Network with PyTorch Geometric, achieving ~80% baseline accuracy</li>
+                    <li>Predictive models on ~7,000 companies using financial metrics</li>
+                    <li>SHAP-based model interpretation and feature engineering</li>
+                    <li>90%+ accuracy · Streamlit dashboard for real-time predictions</li>
                   </ul>
-                  </div>
-                </a>
+                  <div class="project-tags"><span>Python</span><span>XGBoost</span><span>SHAP</span><span>Streamlit</span></div>
+                </div>
+              </div>
+            </a>
 
-                <a class="project-link" href="https://github.com/ninhgiang225/Drug_data_engineering_project" target="_blank">
-                  <div class="project-card">
-                  <img src="images/PharmaGuard.png" alt="Project image">
+            <a class="project-link" href="https://github.com/Colby-Now-Merchandise/Colby-Now-Merchandise" target="_blank">
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="images/ColbyNowMerchandise.png" alt="ColbyNow Merchandise">
+                  <div class="project-overlay">View on GitHub ↗</div>
+                </div>
+                <div class="project-body">
+                  <h3>ColbyNow Merchandise</h3>
+                  <ul>
+                    <li>Full-stack campus marketplace with 17+ production features</li>
+                    <li>Semantic search via SentenceTransformer embeddings</li>
+                    <li>CI/CD · ~95% test coverage · Deployed on Heroku</li>
+                  </ul>
+                  <div class="project-tags"><span>Flask</span><span>PostgreSQL</span><span>NLP</span><span>Heroku</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-link" href="https://github.com/ninhgiang225/CityFlow-AI-Pedestrian-Vehicle-Movement-Analytics" target="_blank">
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="images/CityFlowAI.png" alt="CityFlow AI">
+                  <div class="project-overlay">View on GitHub ↗</div>
+                </div>
+                <div class="project-body">
+                  <h3>CityFlow AI: Real-Time Tracking</h3>
+                  <ul>
+                    <li>YOLOv8 pipeline · 79% mAP@50 detection accuracy</li>
+                    <li>Deep SORT + BoT-SORT for multi-object tracking</li>
+                    <li>Traffic analytics: counts, flow ratios, density heatmaps</li>
+                  </ul>
+                  <div class="project-tags"><span>YOLOv8</span><span>OpenCV</span><span>DeepSORT</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-link" href="https://github.com/ninhgiang225/mulevents" target="_blank">
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="images/Mulevents.png" alt="Mulevents">
+                  <div class="project-overlay">View on GitHub ↗</div>
+                </div>
+                <div class="project-body">
+                  <h3>Mulevents: Campus Event Platform</h3>
+                  <ul>
+                    <li>Full-stack Flask app for Residential Life event management</li>
+                    <li>QR-code attendance tracking · Google Calendar integration</li>
+                    <li>Pytest automated testing · Deployed to Heroku</li>
+                  </ul>
+                  <div class="project-tags"><span>Flask</span><span>SQLite</span><span>JS</span><span>Heroku</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-link" href="https://github.com/ninhgiang225/Predict-Adoption-via-GNN-on-Facebook-Data" target="_blank">
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="images/AdoptGraph.png" alt="AdoptGraph">
+                  <div class="project-overlay">View on GitHub ↗</div>
+                </div>
+                <div class="project-body">
+                  <h3>AdoptGraph: Social Tech Forecasting</h3>
+                  <ul>
+                    <li>Technology adoption forecasting across 100K+ Facebook users</li>
+                    <li>3-layer Graph Convolutional Network · ~80% accuracy</li>
+                  </ul>
+                  <div class="project-tags"><span>PyTorch</span><span>GNN</span><span>Graph ML</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-link" href="https://github.com/ninhgiang225/Drug_data_engineering_project" target="_blank">
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="images/PharmaGuard.png" alt="PharmaGuard">
+                  <div class="project-overlay">View on GitHub ↗</div>
+                </div>
+                <div class="project-body">
                   <h3>PharmaGuard</h3>
                   <ul>
-                      <li>Engineered a MySQL database with linked schemas to unify drug details, recalls, and adverse events, achieving sub-second query performance</li>
-                      <li>Built a Python ETL pipeline using Pandas, SQL, and Spark to extract, clean, and load drug data, leveraging Hive for fast querying and fresh aggregations on large datasets</li>
+                    <li>MySQL schema unifying drug details, recalls, and adverse events</li>
+                    <li>Python ETL with Pandas, SQL, Spark and Hive querying</li>
                   </ul>
-                  </div>
-                </a>
+                  <div class="project-tags"><span>MySQL</span><span>Pandas</span><span>Spark</span><span>Hive</span></div>
+                </div>
+              </div>
+            </a>
 
-
-        
-            </div>
-            </div>
-        
-            <button class="nav-btn next-btn" aria-label="Next Projects">&#10095;</button>
-        
+          </div>
         </div>
-        </section>
-          
+        <button class="nav-btn next-btn" aria-label="Next Projects">&#10095;</button>
+      </div>
+    </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
+      <div class="section-label">05 / Contact</div>
       <h3>Contact</h3>
-      <p>If you'd like to discuss projects, new-grad openings, or collaborations, reach out:</p>
+      <p class="contact-intro">If you'd like to discuss projects, new-grad openings, or collaborations, reach out:</p>
 
       <div class="contact-grid">
-        <form id="contact-form" action="mailto:ngnguy26@colby.edu" method="get" onsubmit="return sendMail(event)" >
+        <form id="contact-form" action="mailto:ngnguy26@colby.edu" method="get" onsubmit="return sendMail(event)">
           <label class="contact-style">
             Name
-            <input type="text" name="name" required placeholder="Your name" style="color:rgb(133, 136, 136)">
+            <input type="text" name="name" required placeholder="Your name">
           </label>
-
-          <label class="contact-style" >
+          <label class="contact-style">
             Email
-            <input type="email" name="email" required placeholder="you@example.com" style="color:rgb(133, 136, 136)">
+            <input type="email" name="email" required placeholder="you@example.com">
           </label>
-
-          <label class="contact-style" class="full" >
+          <label class="contact-style full">
             Message
-            <textarea name="message" rows="5" required placeholder="Hello..." style="color:rgb(133, 136, 136)"></textarea>
+            <textarea name="message" rows="5" required placeholder="Hello..."></textarea>
           </label>
-
           <div class="form-actions">
-            <button type="submit" class="btn">Send email</button>
+            <button type="submit" class="btn">Send email ↗</button>
             <button type="button" class="btn ghost" onclick="copyEmail()">Copy email</button>
           </div>
         </form>
 
         <div class="contact-details card">
-          <p class="contact-inline"><strong>Email</strong><br><a href="mailto:ngnguy26@colby.edu">ngnguy26@colby.edu</a></p>
-          <p class="contact-inline"><strong>Phone</strong><br><a href="tel:+12076607715">207-660-7715</a></p>
+          <p><strong>Email</strong><br><a href="mailto:ngnguy26@colby.edu">ngnguy26@colby.edu</a></p>
+          <p><strong>Phone</strong><br><a href="tel:+12076607715">207-660-7715</a></p>
           <div class="social-row">
             <a href="https://www.linkedin.com/in/ninhgiangnguyen/" class="social-icon" aria-label="LinkedIn">
-              <img src="images/Screenshot 2025-11-10 at 11.31.45 AM.png" alt="LinkedIn logo">
+              <img src="images/Screenshot 2025-11-10 at 11.31.45 AM.png" alt="LinkedIn">
             </a>
             <a href="https://github.com/ninhgiang225" class="social-icon" aria-label="GitHub">
-              <img src="images/Screenshot 2025-11-10 at 11.22.55 AM.png" alt="GitHub logo">
+              <img src="images/Screenshot 2025-11-10 at 11.22.55 AM.png" alt="GitHub">
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p>© <span id="year"></span> Built by Ninh Giang Nguyen</p>
-      </div>
-    </footer>
   </main>
 
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Built by Ninh Giang Nguyen</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
+  <script>
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursor-follower');
+    let mx = 0, my = 0, fx = 0, fy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.transform = `translate(${mx}px,${my}px)`; });
+    function animFollower() { fx += (mx - fx) * 0.1; fy += (my - fy) * 0.1; follower.style.transform = `translate(${fx}px,${fy}px)`; requestAnimationFrame(animFollower); }
+    animFollower();
+    document.querySelectorAll('a,button,.pill,.project-card').forEach(el => { el.addEventListener('mouseenter', () => follower.classList.add('hovered')); el.addEventListener('mouseleave', () => follower.classList.remove('hovered')); });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+    reveals.forEach(r => io.observe(r));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Projects carousel
+    const grid = document.querySelector('.projects-grid');
+    const cardWidth = 520;
+    let pos = 0;
+    document.querySelector('.next-btn').addEventListener('click', () => { const maxPos = (grid.children.length - 2) * cardWidth; pos = Math.min(pos + cardWidth, maxPos); grid.style.transform = `translateX(-${pos}px)`; });
+    document.querySelector('.prev-btn').addEventListener('click', () => { pos = Math.max(pos - cardWidth, 0); grid.style.transform = `translateX(-${pos}px)`; });
+
+    // Copy email
+    function copyEmail() { navigator.clipboard.writeText('ngnguy26@colby.edu'); }
+  </script>
 </body>
 </html>
