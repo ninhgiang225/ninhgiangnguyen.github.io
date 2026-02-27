@@ -669,7 +669,7 @@
   .contact-details strong { color: white; display: block; margin-bottom: 0.2rem; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
   
   .social-row { display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; flex-wrap: wrap; }
-  .social-icon img { width: 60px; height: 60px; margin-right: 25px; object-fit: cover; border-radius: 10px; transition: transform var(--transition), filter var(--transition); filter: grayscale(30%); }
+  .social-icon img { width: 60px; height: 60px; margin-right: 25px; object-fit: cover; border-radius: 100%; transition: transform var(--transition), filter var(--transition); filter: grayscale(30%); }
   .social-icon:hover img { transform: translateY(-3px) scale(1.08); filter: grayscale(0%); }
   
   /* ── Footer ── */
